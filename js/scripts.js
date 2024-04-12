@@ -1,10 +1,17 @@
-let myName = 'Bob';
-document.write(myName);
-myName = 'John Doe';
-document.write(myName);
+let pokemonList = [
+    name = "Bulbasaur",
+    height = 2,
+    type = [grass, poison]
+]
 
-let favoriteFood = 'Pasta'
-document.write(favoriteFood);
-favoriteFood = 'Pasta'
+[    
+    name = "Ivysaur",
+    height = 3,
+    type = [grass, poison]
+]
 
-alert('Hello World');
+[
+    name = "Venusaur",
+    height = 6,
+    type = [grass, poison]
+]
