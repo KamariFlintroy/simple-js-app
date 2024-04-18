@@ -1,20 +1,20 @@
 let pokemonList = [
     {
-        name : "Bulbasaur",
+        name : 'Bulbasaur',
         height : 2,
-        type : [grass, poison]
+        type : ['grass', 'poison']
     },
 
     {    
-        name : "Ivysaur",
+        name : 'Ivysaur',
         height : 3,
-        type : [grass, poison]
+        type : ['grass', 'poison']
     },
 
     {
-        name : "Venusaur",
+        name : 'Venusaur',
         height : 6,
-        type : [grass, poison]
+        type : ['grass', 'poison']
     },
 ];
 
