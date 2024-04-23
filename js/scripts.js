@@ -18,13 +18,13 @@ let pokemonList = [
     },
 ];
 
-for (let i=0; i<pokemonList.length; i++) {
-
-    if (pokemonList[i].height >1.0 && pokemonList[i].height <=5) {
-        document.write(pokemonList[i].name + 'Height:' + pokemonList[i].height + 'WOW That\'s big!' + '<br/>');
-    } else if (pokemonList[i].height >5) {
-        document.write(pokemonList[i].name + 'Height:' + pokemonList[i].height + 'THATS HUGE!!!' + '<br/>');
+function myLoopFunction(pokemon) {
+    if (pokemon.height >1.0 && pokemon.height <=5) {
+        document.write(pokemon.name + 'Height:' + pokemon.height + 'WOW That\'s big!' + '<br/>');
+    } else if (pokemon.height >5) {
+        document.write(pokemon.name + 'Height:' + pokemon.height + 'THATS HUGE!!!' + '<br/>');
     } else{
-        document.write(pokemonList[i].name + 'Height' + pokemonList[i].height + 'So tiny i can barely see it' + '<br/>');
+        document.write(pokemon.name + 'Height' + pokemon.height + 'So tiny i can barely see it' + '<br/>');
     }
 }
+pokemonList.forEach(myLoopFunction);
