@@ -22,22 +22,32 @@ let pokemonRepository = (function () {
         function add(pokemon) {
             pokemonList.push(pokemon);
         }
+
+        function addListitem(pokemon) {
+            let pokemonListItems = document.querySelector('.pokemon-list');
+            let listItem = document.createElement('li');
+            let button = document.createElement('button');
+            button.innerText = pokemon.name;
+            button.classList.add('button-class');
+            listItem.appendChild(button);
+            pokemonListItems.appendChild(listItem)
+            button.addEventListener('click', function(){showDetails(pokemon);});
+        }
+
+        function showDetails(pokemon) {
+            console.log(pokemon);
+        }
+        
         function getAll() {
             return pokemonList;
         }
         return {
             add: add,
-            getAll: getAll
+            getAll: getAll,
+            addListitem: addListitem
         };
 }) ();
 
-function myLoopFunction(pokemon) {
-    if (pokemon.height >1.0 && pokemon.height <=5) {
-        document.write(pokemon.name + 'Height:' + pokemon.height + 'WOW That\'s big!' + '<br/>');
-    } else if (pokemon.height >5) {
-        document.write(pokemon.name + 'Height:' + pokemon.height + 'THATS HUGE!!!' + '<br/>');
-    } else{
-        document.write(pokemon.name + 'Height' + pokemon.height + 'So tiny i can barely see it' + '<br/>');
-    }
-}
-pokemonRepository.getAll().forEach(myLoopFunction);
+pokemonRepository.getAll().forEach( function (pokemon) {
+    pokemonRepository.addListitem(pokemon);
+});
