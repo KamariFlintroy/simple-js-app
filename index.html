@@ -4,16 +4,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewbox" content="width=device-width, initial-scale=1">
-    <title>Simple JS App</title>
+    <title>Kamari Pokedex</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
 
   <body>
-    <h1>Pokedex</h1>
+    <h1 class="Title" style="text-align:center">Pokedex</h1>
     <ul class="pokemon-list"></ul>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <button id="show-modal">Show Modal</button>
+    <button id="show-dialog">Show Dialog</button>
+    <div id="modal-container">
+        <div class="modal">
+            <button class="modal-close">Close</button>
+            <h1 id="modal-title">Title</h1>
+            <p id="modal-text">Text</p>
+            <img id="modal-image" alt="Pokemon Image">
+        </div>
+    </div>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
     <script src="js/scripts.js"></script>
   </body>
-
 </html>
