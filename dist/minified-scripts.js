@@ -1,3 +1,4 @@
+/* global $ */
 let pokemonRepository=(function(){let pokemonList=[];let apiUrl="https://pokeapi.co/api/v2/pokemon/?limit=150";function add(pokemon){pokemonList.push(pokemon)}
 function addListitem(pokemon){let pokemonList=document.querySelector(".list-group");let listItem=document.createElement("li");let button=document.createElement("btn","btn-primary");listItem.classList.add("list-group-item");button.innerText=pokemon.name;button.classList.add("btn-primary");button.setAttribute("data-toggle","modal");button.setAttribute("data-target","#exampleModal");listItem.appendChild(button);pokemonList.appendChild(listItem);button.addEventListener("click",function(){showDetails(pokemon)})}
 function loadList(){return fetch(apiUrl).then(function(response){return response.json()}).then(function(json){json.results.forEach(function(item){let pokemon={name:item.name,detailsUrl:item.url,height:item.height,};add(pokemon)})}).catch(function(e){console.error(e)})}
